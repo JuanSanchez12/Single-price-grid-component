@@ -1,0 +1,183 @@
+//-------------------------------------------Global
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #F2F2F2;;
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-padding { //paddding within each container
+    padding: 40px;
+}
+
+// header typography
+h1,
+h2,
+button,
+.price {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.125rem;
+}
+
+//-------------------------------------------Containers
+.container {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 318px 317px;
+    grid-template-rows: 216px 259px;
+    grid-template-areas: "first first"
+                         "second third";
+    box-shadow: 0px 3px 10px hsl(204, 43%, 93%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.first-container {
+    grid-area: first;
+    background-color: #ffffff;
+
+    h1 {
+        color: hsl(179, 62%, 43%);
+        margin-bottom: 24px;
+    }
+
+    h2 {
+        color: hsl(71, 73%, 54%);
+        margin-bottom: 11px;
+    }
+
+    p {
+        color: hsl(218, 22%, 67%);
+        line-height: 26px;
+    }
+}
+
+.second-container {
+    grid-area: second;
+    color: #ffffff;
+    background-color: hsl(179, 62%, 43%);
+
+    h2 {
+        margin-bottom: 18px;
+    }
+
+    .price {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+
+    span {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-left: 11px;
+        opacity: 50%;
+    }
+
+    p {
+        margin-bottom: 26px;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        color: inherit;
+        background-color: hsl(71, 73%, 54%);
+        width: 100%;
+        padding: 1rem 0;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #c0df34b3;
+        }
+    }
+}
+
+.third-container {
+    grid-area: third;
+    color: #ffffff;
+    background-color: #2ab2afcc;
+
+    h2 {
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-size: 0.875rem;
+        line-height: 20px;
+        padding-right: 54px;
+        opacity: 75%;
+    }
+}
+
+//-------------------------------------------Mobile Media Query
+@media (max-width: 675px) {
+//-------------------------------------------Global
+html {
+    font-size: 14px;
+}
+
+.container-padding {
+    padding: 24px;
+}
+
+//Header Typpgraphy
+h1 {
+    font-size: 1.429rem;
+}
+
+h2 {
+    font-size: 1.286rem;
+}
+
+//-------------------------------------------Container
+.container {
+    grid-template-columns: 311px;
+    grid-template-rows: 268px 228px 227px;
+    grid-template-areas: "first"
+                         "second"
+                         "third";
+}
+
+.first-container {
+
+    h2 {
+        font-size: 1.071rem;
+        margin-bottom: 16px;
+    }
+}
+
+}
+
+@media (max-width: 342px) {
+    .container-padding {
+        padding: 24px 10px;
+    }
+
+    .container {
+        grid-template-columns: 290px;
+    }
+}
